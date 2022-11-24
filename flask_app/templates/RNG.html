@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+        {% block content %}
+            {% for i in range(1) %}
+                {% if Dummy is not string %}
+                    <h2>RNG time, how many times do we need to refresh to get to 0.9?</h2>
+                    <h3>Number: {{RNG}}</h3>
+                    <h3>Rounded that's {{rounder}}</h3>
+                    <h3>Answer: {{counter}}</h3>
+                {% else %}
+                    <h2>Congratulations, after a well {{counter}} attempts you did it!</h2>
+                    <h3>Number: {{ RNG }} is the solution rounded up to {{rounder}}</h3>
+                {% endif %}
+            {% endfor %}
+        {% endblock %}
+</body>
+</html>

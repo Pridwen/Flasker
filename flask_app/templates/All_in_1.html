@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+        {% block content %}
+        {% for i in range(1) %}
+            <h3>Number: {{Nr}}</h3>
+            <h3>Rev of number: {{Rev}}</h3>
+            {% if Div|length %}
+                <h3>What are the divisors: {{Div}}</h3>
+            {% else %}
+                <h3>No divisors</h3>
+            {% endif %}
+            {% if Prime|length %}
+                <h3>Yes, it is {{Prime}}</h3>
+            {% else %}
+                <h3>No, it is not prime.</h3>
+            {% endif %}
+            <h3>Sum of digits: {{Sum}}</h3>
+            <h3>Digits themselves: {{Digits}}</h3>
+            <h3>Conversion to binary: {{Bi}}</h3>
+            <h3>Decay in primes: {{PrimeFact}}</h3>
+       {% endfor %}
+    {% endblock %}
+</body>
+</html>
